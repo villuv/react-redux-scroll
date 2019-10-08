@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import hoistStatics from 'hoist-non-react-statics';
-import ReactDOM from 'react-dom';
+import {findDOMNode} from 'react-dom';
 
 export default Component => {
   if (process.env.IS_SSR) return Component;
@@ -19,7 +19,7 @@ export default Component => {
 
     componentDidMount() {
       // eslint-disable-next-line react/no-find-dom-node
-      this._domNode = this._domNode || ReactDOM.findDOMNode(this);
+      this._domNode = this._domNode || findDOMNode(this);
     }
 
     getScrollContext() {
