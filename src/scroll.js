@@ -1,4 +1,4 @@
-import {findDOMNode} from 'react-dom';
+import ReactDOM from 'react-dom';
 
 const onGoingScrolls = new WeakMap();
 
@@ -100,12 +100,12 @@ export default (
         }
       : context.getBoundingClientRect();
 
-
-  const targetNode = findDOMNode(target);
-  if(!targetNode) {
+  // eslint-disable-next-line
+  const targetNode = ReactDOM.findDOMNode(target);
+  if (!targetNode) {
     return;
   }
-  const targetRect = targetNode.getBoundingClientRect()
+  const targetRect = targetNode.getBoundingClientRect();
 
   const to = {
     x:
