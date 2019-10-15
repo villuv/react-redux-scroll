@@ -1,7 +1,11 @@
 {
-  "name": "react-redux-scroll",
-  "version": "0.2.1",
+  "name": "@resys/react-redux-scroll",
+  "version": "0.2.2",
   "description": "Manage the scrolls of your React app through your redux-actions",
+  "publishConfig": {
+    "registry": "https://repo.resys.io/repository/npm/",
+    "always-auth": true
+  },
   "keywords": [
     "react",
     "reactjs",

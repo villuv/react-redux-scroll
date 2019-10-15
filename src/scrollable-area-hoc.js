@@ -19,7 +19,7 @@ export default Component => {
 
     componentDidMount() {
       // eslint-disable-next-line react/no-find-dom-node
-      this._domNode = this._domNode || ReactDOM.findDOMNode(this);
+      this._domNode = ReactDOM.findDOMNode(this._domNode);
     }
 
     getScrollContext() {

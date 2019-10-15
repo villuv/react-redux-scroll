@@ -120,6 +120,7 @@ export default (function (target, ctx) {
     scrollTop: 0
   } : context.getBoundingClientRect();
 
+  // eslint-disable-next-line
   var targetNode = ReactDOM.findDOMNode(target);
   if (!targetNode) {
     return;

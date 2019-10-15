@@ -33,7 +33,7 @@ export default (function (Component) {
 
     ScrollableArea.prototype.componentDidMount = function componentDidMount() {
       // eslint-disable-next-line react/no-find-dom-node
-      this._domNode = this._domNode || ReactDOM.findDOMNode(this);
+      this._domNode = ReactDOM.findDOMNode(this._domNode);
     };
 
     ScrollableArea.prototype.getScrollContext = function getScrollContext() {
