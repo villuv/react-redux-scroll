@@ -17,13 +17,10 @@ export default Component => {
       return { getScrollContext: this.getScrollContext };
     }
 
-    componentDidMount() {
-      // eslint-disable-next-line react/no-find-dom-node
-      this._domNode = ReactDOM.findDOMNode(this._domNode);
-    }
-
     getScrollContext() {
-      return this._domNode;
+      // eslint-disable-next-line react/no-find-dom-node
+      const domNode = ReactDOM.findDOMNode(this._domNode);
+      return domNode;
     }
 
     render() {

@@ -31,13 +31,10 @@ export default (function (Component) {
       return { getScrollContext: this.getScrollContext };
     };
 
-    ScrollableArea.prototype.componentDidMount = function componentDidMount() {
-      // eslint-disable-next-line react/no-find-dom-node
-      this._domNode = ReactDOM.findDOMNode(this._domNode);
-    };
-
     ScrollableArea.prototype.getScrollContext = function getScrollContext() {
-      return this._domNode;
+      // eslint-disable-next-line react/no-find-dom-node
+      var domNode = ReactDOM.findDOMNode(this._domNode);
+      return domNode;
     };
 
     ScrollableArea.prototype.render = function render() {

@@ -27676,13 +27676,10 @@
 	      return { getScrollContext: this.getScrollContext };
 	    };
 
-	    ScrollableArea.prototype.componentDidMount = function componentDidMount() {
-	      // eslint-disable-next-line react/no-find-dom-node
-	      this._domNode = reactDom.findDOMNode(this._domNode);
-	    };
-
 	    ScrollableArea.prototype.getScrollContext = function getScrollContext() {
-	      return this._domNode;
+	      // eslint-disable-next-line react/no-find-dom-node
+	      var domNode = reactDom.findDOMNode(this._domNode);
+	      return domNode;
 	    };
 
 	    ScrollableArea.prototype.render = function render() {
